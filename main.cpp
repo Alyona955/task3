@@ -34,6 +34,22 @@ void Header(ofstream &site)
     cout<<"The header is created"<<endl;
 }
 
+void TopHeader(ofstream &site)
+{
+    cout<<"Create a variety of headers."<<endl;
+    int n;
+    cin>>n;
+    site<<"<h"<<n<<" style=\"color:green; background: black; padding:10px;\">";
+    cout<<"Write header"<<endl;
+    string header;
+    cin.ignore(32767, '\n');
+    getline(cin, header);
+    site<<header;
+    site<<"</h"<<n<<">"<<endl;
+    cout<<"The header is created"<<endl;
+}
+
+
 void Text(ofstream &site)
 {
 
